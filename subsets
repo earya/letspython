@@ -1,0 +1,12 @@
+def all_sublists(x):
+    '''Generates and returns all sublists of an input list x
+    x should be a unique list of integers
+    return_type: list of all sublists/subsets of x'''
+    assert isinstance(x,list)
+    sublists = [[]]
+    for i in x:
+        print (i)
+        sublists += [[i] + j for j in sublists]
+        print (sublists)
+        
+all_sublists([3,4,1])
